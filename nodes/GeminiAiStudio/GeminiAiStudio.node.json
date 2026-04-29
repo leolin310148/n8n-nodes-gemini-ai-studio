@@ -1,0 +1,13 @@
+{
+  "node": "n8n-nodes-base.geminiAiStudio",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["AI", "Development"],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://ai.google.dev/gemini-api/docs"
+      }
+    ]
+  }
+}

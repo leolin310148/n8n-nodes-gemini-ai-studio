@@ -1,0 +1,57 @@
+{
+  "name": "@leolin310148/n8n-nodes-gemini-ai-studio",
+  "version": "0.1.0",
+  "description": "n8n community node for the Google Gemini API via direct AI Studio REST calls.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "gemini",
+    "google-generative-ai",
+    "ai-studio",
+    "llm"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/leolin310148/n8n-nodes-gemini-ai-studio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leolin310148/n8n-nodes-gemini-ai-studio.git"
+  },
+  "author": {
+    "name": "leolin310148"
+  },
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && npm run build:icons",
+    "build:icons": "mkdir -p dist/nodes/GeminiAiStudio && cp nodes/GeminiAiStudio/*.svg nodes/GeminiAiStudio/*.json dist/nodes/GeminiAiStudio/",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "README.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/GoogleGenerativeAiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/GeminiAiStudio/GeminiAiStudio.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "n8n-workflow": "^1.60.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "overrides": {
+    "form-data": "^4.0.4"
+  }
+}
