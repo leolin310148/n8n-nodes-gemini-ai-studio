@@ -19,9 +19,6 @@ jobs:
           cache: npm
           registry-url: https://registry.npmjs.org
 
-      - name: Upgrade npm for OIDC trusted publishing
-        run: npm install -g npm@latest
-
       - name: Verify tag matches package.json version
         run: |
           TAG="${GITHUB_REF#refs/tags/v}"
@@ -33,4 +30,4 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-      - run: npm publish --provenance --access public
+      - run: npx -y npm@latest publish --provenance --access public
