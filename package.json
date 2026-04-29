@@ -1,6 +1,6 @@
 {
   "name": "@leolin310148/n8n-nodes-gemini-ai-studio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "n8n community node for the Google Gemini API via direct AI Studio REST calls.",
   "keywords": [
     "n8n-community-node-package",
@@ -53,5 +53,8 @@
   },
   "overrides": {
     "form-data": "^4.0.4"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.8"
   }
 }
